@@ -4,15 +4,52 @@
     <meta charset="utf-8">
     <title>Password tester 2.0</title>
     <link rel="stylesheet" href="css/stylesheet.css">
+    <link rel="script" href="script.js">
     <link href="https://fonts.googleapis.com/css?family=K2D" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Krub" rel="stylesheet">
   </head>
   <body>
     <div class="window">
       <div class="content">
-        <input type="password" name="" value="" id="pw" placeholder="Input Password">
-        <h1 id="answer">How safe is your password?</h1>
+        <input type="password" name="" value="" id="pw" onchange="myFunction()" placeholder="Input Password">
+        <h1>How safe is your password?</h1>
+        <h1 id="answer"></h1>
       </div>
     </div>
+    
+    <script type="text/javascript">
+    function myFunction () {
+      const input = document.getElementById('pw').value
+      let answer = ''
+
+      if (input.length <= 0) {
+          answer = ("You didn't even type in a password")
+      } else if (input.length == 1) {
+          answer = ("I wouldn't call this a password?")
+      } else if (input.length == 2) {
+          answer = ("that doesn't count as a password!")
+      } else if (input.length <= 4) {
+          answer = ("A toddler can hack that password!")
+      } else if (input.length <= 7) {
+          answer = ("Try harder maybe?")
+      } else if (input.length <= 10) {
+          answer = ("I don't see so much effort in this password")
+      } else if (input.length <= 14) {
+          answer = ("Don't come crying when your account gets hacked.")
+      } else if (input.length <= 19) {
+          answer = ("Is this really your password? im surprised that you haven't got hacked")
+      } else if (input.length <= 22) {
+          answer = ("Its ok, still weak...")
+      } else if (input.length <= 25) {
+          answer = ("This would be better with some smileys.")
+      } else if (input.length <= 30) {
+          answer = ("Is this even a world?")
+      } else if (input.length >= 31) {
+          answer = ("Can you remember this?")
+      }
+      document.getElementById('answer').textContent = answer
+    }
+
+    </script>
   </body>
 </html>
