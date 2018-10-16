@@ -1,0 +1,36 @@
+body{
+  height: 100vh;
+  width: 100vw;
+  background-color: #DD5755;
+  background-color: #474747;
+}
+
+h1{
+  font-family: 'Krub', sans-serif;
+}
+
+.window{
+  text-align: center;
+  border-radius: 20px;
+  margin-top: 25vh;
+}
+
+input{
+    border-radius: 5px;
+    border-style: hidden;
+    padding: 3px;
+    font-family: 'K2D', sans-serif;
+    font-size: 200%;
+    text-align: center;
+}
+
+.content{
+  background-color: #a0a0a0;
+  display: table;
+  margin: 0 auto;
+  padding: 20%;
+  padding-top: 2%;
+  padding-bottom: 3%;
+  border-radius: 12px;
+  border-style: solid;
+ }
