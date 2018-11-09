@@ -14,43 +14,99 @@
     <h1>AMAZING PASSWORD TESTER 2.0</h1>
     <div class="window">
       <div class="content">
-        <input type="password" name="" value="" id="pw" onchange="myFunction()" placeholder="Input Your Awesome Password">
-        <h2 id="answer"></h2>
+        <input type="password" name="" value="" id="pw" oninput="myFunction()" placeholder="Input Your Awesome Password">
+        <h2 id="answertxt"></h2>
       </div>
     </div>
   <footer><p>Made by: <a href="https://github.com/LucasBaun" target="_blank">Lucas Baunsgaard</a></p></footer>
     <script type="text/javascript">
-    function myFunction () {
-      const input = document.getElementById('pw').value
-      let answer = ''
 
-      if (input.length <= 0) {
-          answer = ("You didn't even type in a password")
-      } else if (input.length == 1) {
-          answer = ("I wouldn't call this a password?")
-      } else if (input.length == 2) {
-          answer = ("that doesn't count as a password!")
-      } else if (input.length <= 4) {
-          answer = ("A toddler can hack that password!")
-      } else if (input.length <= 7) {
-          answer = ("Try harder maybe?")
-      } else if (input.length <= 10) {
-          answer = ("I don't see so much effort in this password")
-      } else if (input.length <= 14) {
-          answer = ("Don't come crying when your account gets hacked.")
-      } else if (input.length <= 19) {
-          answer = ("Is this really your password? im surprised that you haven't got hacked")
-      } else if (input.length <= 22) {
-          answer = ("Its ok, still weak...")
-      } else if (input.length <= 25) {
-          answer = ("This would be better with some smileys.")
-      } else if (input.length <= 30) {
-          answer = ("Is this even a world?")
-      } else if (input.length >= 31) {
-          answer = ("Can you remember this?")
-      }
-      document.getElementById('answer').textContent = answer
+      // const answers = ["You didn't even type in a password" , "I wouldn't call this a password?" , "that doesn't count as a password!" , "A toddler can hack that password!" , "Try harder maybe?" , "I don't see so much effort in this password" , "Don't come crying when your account gets hacked." , "Its ok, still weak..." , "Is this really your password? im surprised that you haven't got hacked" , "This would be better with some smileys." , "Is this even a world?" , "Can you remember this?  Let's be real"]
+      // const answers = ["You didn't even type in a password","A password is more than 1 character you know?","This must be the worst idea of a password","If you want to have 1 character be my guest.","Can you call this a password?","Just don't... ","I don't see so much effort in this password","A password is more than 2 character you know?","If you want to have 2 character be my guest."]
+      // let number = 1
+      // let number = random(10)
+      // let answer
+              // function myFunction () {
+              //   const input = document.getElementById('pw').value
+              //
+              // let x = 0
+              // let y = Math.floor(Math.random() * 2) +1
+              //
+              // switch (input.length) {
+              //   case 0:
+              //     const answers = [
+              //       'You didn\'t even type in a password',
+              //       'A password is more than 1 character you know?',
+              //       'This must be the worst idea of a password'
+              //     ]
+              //     break
+              //   case 1:
+              //   alert("1");
+              //     break
+              //   default:
+              // }
+              // }
+              // document.getElementById('answertxt').textContent = answers[y]
+
+              function myFunction () {
+  const input = document.getElementById('pw').value
+  let y = Math.floor(Math.random() * 2) + 1
+
+  let answers
+
+  switch (input.length) {
+    case 0:
+      answers = [
+        'You didn\'t even type in a password',
+        'A password is more than 1 character you know?',
+        'This must be the worst idea of a password'
+      ]
+      break
+    case 1:
+      window.alert('1')
+      break
+    default:
+  }
+  document.getElementById('answertxt').textContent = answers[y]
+}
+
+
+
+
+
+//       switch (input.length) {
+//     case 0:
+//         x = 0
+//         break;
+//     case 1:
+//         x = Math.floor(Math.random() * 4) + 1
+//         break;
+//     case 2:
+//         x = Math.floor(Math.random() * 5) + 4
+//         break;
+//     case 3:
+//         x = Math.floor(Math.random() * 12) + 1
+//         break;
+//     case 4:
+//         x = Math.floor(Math.random() * 12) + 1
+//         break;
+//     case 5:
+//         x = Math.floor(Math.random() * 12) + 1
+//         break;
+//     case 6:
+//         x = Math.floor(Math.random() * 12) + 1
+//         break;
+//     case 7:
+//         x = Math.floor(Math.random() * 12) + 1
+//         break;
+// }
+
+
+      // document.getElementById('answer').textContent = answers[x]
     }
+
+
+    input.length == 1
 
     </script>
   </body>
