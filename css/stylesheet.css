@@ -1,6 +1,5 @@
 body{
-  background-color: #DD5755;
-  background-color: #474747;
+  background-color: #141b41;
   text-align: center;
 }
 
@@ -9,7 +8,7 @@ h1{
   font-size: 550%;
   margin-top: 75px;
   margin-bottom: 75px;
-  color: white;
+  color: #98b9f2;
   letter-spacing: 3px;
 }
 
@@ -20,17 +19,19 @@ h2{
 }
 
 p{
-  color: black;
+  color: #141b41;
 }
 
 a{
   text-decoration: none;
-  color: #3a3a3a;
+  color: #141b41;
+  transition: 0.3s;
 }
 
 a:hover{
-  font-size: 110%;
-  transition: 0.4s;
+  /* font-size: 110%; */
+  color: #918ef4;
+  transition: 0.3s;
 }
 
 .window{
@@ -51,7 +52,7 @@ input{
 }
 
 .content{
-  background-color: #a0a0a0;
+  background-color: #306bac;
   display: table;
   margin: 0 auto;
   width: 85%;
@@ -67,6 +68,6 @@ input{
    bottom: 0;
    width: 100%;
    height: 6%;
-   background-color: #a0a0a0;
+   background-color: #306bac;
    color: white;
 }
