@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Password tester 2.0</title>
+    <title>Password tester 2.1</title>
     <link rel="stylesheet" href="css/stylesheet.css">
     <link rel="script" href="script.js">
     <link href="https://fonts.googleapis.com/css?family=K2D" rel="stylesheet">
@@ -11,16 +11,16 @@
     <link rel="icon" href="icon.png">
   </head>
   <body>
-    <h1>AMAZING PASSWORD TESTER 2.0</h1>
+    <h1>AMAZING PASSWORD TESTER 2.1</h1>
     <div class="window">
       <div class="content">
-        <input type="password" name="" value="" id="pw" onchange="myFunction()" placeholder="Input Your Awesome Password">
+        <input type="password" name="" value="" id="pw" onchange="Passtxt()" placeholder="Input Your Shitty Password">
         <h2 id="answer"></h2>
       </div>
     </div>
-  <footer><p>Made by: <a href="https://github.com/LucasBaun" target="_blank">Lucas Baunsgaard</a></p></footer>
+  <footer><p>Made by <a href="https://github.com/LucasBaun" target="_blank">Lucas Baunsgaard</a> for school.</p></footer>
     <script type="text/javascript">
-    function myFunction () {
+    function Passtxt () {
       const input = document.getElementById('pw').value
       let answer = ''
 
@@ -43,7 +43,7 @@
       } else if (input.length <= 22) {
           answer = ("Its ok, still weak...")
       } else if (input.length <= 25) {
-          answer = ("This would be better with some smileys.")
+          answer = ("I know you can do better then this...")
       } else if (input.length <= 30) {
           answer = ("Is this even a world?")
       } else if (input.length >= 31) {
@@ -52,6 +52,8 @@
       document.getElementById('answer').textContent = answer
     }
 
+    Passtxt(); // Update once immediately...
+    setInterval(Passtxt, 100) // ...and then again every 3000ms
     </script>
   </body>
 </html>
